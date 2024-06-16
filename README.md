@@ -88,3 +88,23 @@ public class Main {
 ```
 ①에서의 a값만 출력하는 프로그램을 작성하시오.
 ```
+---
+#### [3] 다음의 프로그램을 작성하고 디버깅을 하며 ①, ②, ③ 위치의 값을 watches에서 a의 값을 출력하시오.<br>즉,①에서 a의 값, ②에서 a의 값, ③에서 a의 값을 1,2,3과 바꾸어 출력하면 됩니다.
+코드
+```
+public class Main {
+    public static void main(String[] args) {
+        java.util.Calendar cal = java.util.Calendar.getInstance();
+        int a = 0; 
+        a = cal.get ( java.util.Calendar.YEAR )-1900; //---①
+        a += cal.get ( java.util.Calendar.MONTH ); //---②
+        a += cal.get ( java.util.Calendar.DATE ) ; //---③
+    
+        System.out.printf("%d %d %d ", 1, 2, 3); //① ② ③에서의 a값을 1, 2, 3자리에 각각 써 넣는다.
+    }
+}
+```
+출력
+```
+① ② ③ 의 값만 출력
+```
